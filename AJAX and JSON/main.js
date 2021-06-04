@@ -17,9 +17,14 @@ if (pagecounter>3) {
 function renderhtml(data) {
     var outputting="";
     for(i=0;i<data.length;i++){
-        outputting += "<p>"+ data[i].name+ " is a "+ data[i].species+" likes to eat"
+        outputting += "<p>"+ data[i].name+ " is a "+ data[i].species+" likes to eat "
       for(ii=0;ii<data[i].foods.likes.length;ii++){
-        outputting+=data[i].foods.likes[ii];
+          if(ii==0){
+              outputting+=data[i].foods.likes[ii];
+          }
+          else{
+               outputting+=" and "+data[i].foods.likes[ii];
+          }
       }
       outputting+=".</p>"
         
