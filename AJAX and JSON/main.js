@@ -26,8 +26,19 @@ function renderhtml(data) {
                outputting+=" and "+data[i].foods.likes[ii];
           }
       }
-      outputting+=".</p>"
+      outputting+=" and dislikes "
+
+      for(ii=0;ii<data[i].foods.dislikes.length;ii++){
+          if(ii==0){
+              outputting+=data[i].foods.dislikes[ii];
+          }
+          else{
+               outputting+=" and "+data[i].foods.dislikes[ii];
+          }
+      }
         
     }
+
+         outputting+=".</p>"
     emptydiv.insertAdjacentHTML('beforeend',outputting)
 }
